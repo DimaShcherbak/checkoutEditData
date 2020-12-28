@@ -1,0 +1,53 @@
+<?php ///** @var \Exam\QuickOrder\Block\QuickOrder $block */ ?>
+<?php //$productSku = $block->getProductSku()?>
+<button type="submit"
+        title="Address title"
+        class="btn-btn-primary"
+        id="btn-btn-primary"
+>
+    <span><?= /* @escapeNotVerified */ __('Address span') ?></span>
+</button>
+
+
+
+<div class="mypopup">
+    <form action=""
+          method="POST"
+          data-mage-init='{"validation":{}}'>
+        <label>Name
+            <input type="text" name="name" data-validate='{"required":true, "maxlength": 18}'>
+        </label>
+        <label>Phone number
+            <input type="number" name="phone" data-validate='{"required":true, "maxlength": 20, "number": true}'>
+        </label>
+        <label>Email
+            <input type="email" name="email" data-validate="{'maxlength': 50, 'validate-email':true }">
+        </label>
+        <input type="hidden" name="sku" value="">
+        <input type="hidden" name="url" value="">
+        <input type="submit" value="Send" class="action submit primary">
+    </form>
+</div>
+
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function($,modal) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                title: 'Dragun',
+                buttons: false
+            };
+            var popup = modal(options, $('.mypopup'));
+            $("#btn-btn-primary").on("click",function(){
+                $('.mypopup').modal('openModal');
+            });
+        }
+    );
+</script>
+

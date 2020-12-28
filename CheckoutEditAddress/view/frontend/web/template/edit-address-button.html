@@ -1,0 +1,32 @@
+<!--<div class="edit-address-popup">-->
+<!--<button type="button"-->
+<!--        class="action action-show-popup"-->
+<!--        click="showFormPopUp"-->
+<!--        data-bind="event: {-->
+<!--       click:someFunction-->
+<!--    }">-->
+<!--<span>Edit Address</span>-->
+<!--</button>-->
+<!--</div>-->
+
+<!--<style type="text/css">-->
+<!--    .action action-show-popup {-->
+<!--        font-size: 120%; /* Размер шрифта */-->
+<!--        font-family: Verdana, Arial, Helvetica, sans-serif; /* Семейство шрифта */-->
+<!--        color: #336; /* Цвет текста */-->
+<!--    }-->
+<!--</style>-->
+
+<!--<if args="!isFormInline">-->
+    <div class="edit-address-popup">
+        <button type="button"
+                class="action edit-address-link"
+                click="editAddress">
+<!--                visible="!isNewAddressAdded()"-->
+            <span translate="'Edit Address'" />
+        </button>
+    </div>
+<!--    <div id="opc-new-shipping-address111"-->
+<!--         visible="isFormPopUpVisible()"-->
+<!--         render="shippingFormTemplate" />-->
+<!--</if>-->
